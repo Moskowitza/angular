@@ -6,7 +6,7 @@
 <!-- <div ng-app="">
   <p>My first expression: {{ 5 + 5 }}</p>
 </div> -->
-<div ng-app="myApp" ng-controller="myCtrl">
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
 
   First Name: <input type="text" ng-model="firstName"><br>
   Last Name: <input type="text" ng-model="lastName"><br>
@@ -21,6 +21,40 @@
       $scope.firstName= "John";
       $scope.lastName= "Doe";
   });
-  </script>
+  </script> -->
+<!-- This is cool, maybe use it for live mixing of colors -->
+  <!-- <div ng-app="" ng-init="myCol='lightblue'">
+
+    <input style="background-color:{{myCol}}" ng-model="myCol">
+    
+    </div> -->
+
+    <body ng-app="myApp">
+<!-- When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it, you must use - separated name, w3-test-directive: -->
+      <!-- <w3-test-directive></w3-test-directive>
+      
+      <script>
+      var app = angular.module("myApp", []);
+      app.directive("w3TestDirective", function() {
+          return {
+              template : "<h1>Made by a directive!</h1>"
+          };
+      });
+      </script>
+      
+      </body> -->
+      <div ng-app="myApp" ng-controller="namesCtrl"> 
+
+        <ul>
+          <li ng-repeat="x in names">
+            {{ x.name + ', ' + x.country }}
+          </li>
+        </ul>
+        
+        </div>
+        
+        <script src="namesController.js"></script>
+        
+        
 </body>
 </html>
